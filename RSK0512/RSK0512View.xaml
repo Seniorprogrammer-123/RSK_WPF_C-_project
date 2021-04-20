@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="RSK0512.RSK0512View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RSK0512"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFC1C5DD" Width="794">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+            <ColumnDefinition Width="75*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Image Source="/logo0512.png" Grid.ColumnSpan="4" Margin="50,21,15,34" Grid.Column="1" Grid.RowSpan="2" />
+        <TextBlock Grid.ColumnSpan="4" Grid.Column="7" TextAlignment="Right" FontSize="10" FontWeight="Bold" Margin="51,2,0,2" HorizontalAlignment="Left">
+            <Run Text="Skilagrein staðgreiðslu af launum" FontSize="16"/><LineBreak/>
+            <Run Text="Eintak innheimtumanns"/>
+        </TextBlock>
+        <TextBlock VerticalAlignment="Top" TextAlignment="Left" FlowDirection="LeftToRight" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Width="260" Height="30" Grid.ColumnSpan="4" Grid.Row="4" FontFamily="Arial Black" FontSize="9" FontStretch="SemiCondensed" FontStyle="Normal" TextDecorations="{x:Null}" FontWeight="Bold" MaxWidth="320" MaxHeight="50" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="-74,24,0,0" Grid.RowSpan="2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="Skil á staðgreiðslu skal inna af hendi hjá innheimtu -"/><LineBreak/><Run Text="mönnum ríkissjóðs eða í bönkum og sparisjóðum."/></TextBlock>
+        <TextBox
+          Name="tbMultiLine"
+          TextWrapping="Wrap"
+          AcceptsReturn="True"
+          VerticalScrollBarVisibility="Hidden"
+          Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="2"  Grid.Row="1" Margin="1,4,7,4"
+        >
+            Kennitala
+        </TextBox>
+        <TextBox
+          Name="tdMultiLine"
+          TextWrapping="Wrap"
+          AcceptsReturn="True"
+          VerticalScrollBarVisibility="Hidden"
+          Grid.RowSpan="2" Grid.Column="4"  Grid.Row="1" Grid.ColumnSpan="3" Margin="1,4,7,4"
+        >
+            Greiðslutímabil
+        </TextBox>
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="1" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="A .  Staðgreiðsla og trygginga"/><LineBreak/>
+            <Run Text="      gjald samtals (B+C+D)"/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="1" Margin="4,4,8,4" />
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="2" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="B .  Staðgreiðsla af "/><LineBreak/>
+            <Run Text="      greiddum launum"/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="2" Margin="4,4,8,4" />
+        <TextBox
+          Name="tcMultiLine"
+          TextWrapping="Wrap"
+          AcceptsReturn="True"
+          VerticalScrollBarVisibility="Hidden"
+           Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="2"  Grid.Row="3" Margin="1,4,7,4"
+        >
+            Nafn - heimili - póststöð launagreiðanda
+        </TextBox>
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="3" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="C .  Staðgreiðsla af "/><LineBreak/>
+            <Run Text="      reiknuðu endurgjaldi"/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="3" Margin="4,4,8,4" />
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="4" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="D .  Tryggingagjald "/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="4" Margin="4,4,8,4" />
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="5" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="E .   Heildarfjárhæð "/><LineBreak/>
+            <Run Text="      greiddra launa "/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="5" Margin="4,4,8,4" />
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="6" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="F .   Reiknað endurgjald "/><LineBreak/>
+            <Run Text="      greiðanda "/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="6" Margin="4,4,8,4" />
+        <TextBox
+          Name="teMultiLine"
+          TextWrapping="Wrap"
+          AcceptsReturn="True"
+          VerticalScrollBarVisibility="Hidden"
+            Grid.ColumnSpan="5" Grid.RowSpan="2" Grid.Column="2"  Grid.Row="7" Margin="1,4,7,4"
+        >
+            Undirritaður staðfestir að skýrsla þessi er gefin eftir bestu vitund og er í fullu
+            samræmi við fyrirliggjandi gögn.
+        </TextBox>
+        <TextBlock Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="7"  Grid.Row="7" FontSize="10" FontWeight="Bold" Margin="2,2,0,2">
+            <Run Text="G .   Samtala til afstemmingar "/><LineBreak/>
+            <Run Text="      (A+B+C+D+E+F) "/>
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="2" Grid.RowSpan="1" Grid.Column="9"  Grid.Row="7" Margin="4,4,8,4" />
+        <CheckBox Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Column="7"  Grid.Row="8" Margin="20,7,0,31">Enable feature ABC</CheckBox>
+        <TextBlock Grid.ColumnSpan="6" Grid.RowSpan="1" Grid.Column="1"  Grid.Row="9" FontSize="10" FontWeight="Bold" Margin="68,0,0,0">
+            <Run Text="Til þess að skil teljist fullnægjandi verður eintak innheimtumanns að vera útfyllt."/>
+        </TextBlock>
+        <Label Grid.ColumnSpan="2" Grid.Column="1"  Grid.Row="10" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Margin="10,0,63,0">RSK 5.12</Label>
+        <Label Grid.ColumnSpan="2" Grid.Column="2"  Grid.Row="10" FontSize="8" VerticalAlignment="Top" Margin="10,10,61,0">19-8-2011</Label>
+    </Grid>
+</UserControl>

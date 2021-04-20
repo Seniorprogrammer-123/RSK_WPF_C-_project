@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image\logo.png" />
+    <None Remove="logo.png" />
+    <None Remove="logo0202.png" />
+    <None Remove="logo0512.png" />
+    <None Remove="vline.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="logo.png" />
+    <Resource Include="logo0202.png" />
+    <Resource Include="logo0512.png" />
+    <Resource Include="vline.png" />
+  </ItemGroup>
+
+</Project>
